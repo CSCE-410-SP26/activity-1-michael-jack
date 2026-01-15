@@ -1,0 +1,85 @@
+1. Number of files in root directory: 25
+2. Available user programs in xv6: 
+
+README         2 2 2425
+cat            2 3 35384
+echo           2 4 34296
+forktest       2 5 17240
+grep           2 6 42736
+init           2 7 34760
+kill           2 8 34224
+ln             2 9 34040
+ls             2 10 41512
+mkdir          2 11 34280
+rm             2 12 34272
+sh             2 13 56104
+stressfs       2 14 35144
+usertests      2 15 186024
+grind          2 16 50496
+wc             2 17 36328
+zombie         2 18 33648
+logstress      2 19 36192
+forphan        2 20 35048
+dorphan        2 21 34488
+console        3 22 0
+
+Bonus:
+
+usertests: 
+
+Took around 4 minutes. Below is a little bit of the end of the output
+
+usertrap(): unexpected scause 0xf pid=6640
+            sepc=0x4442 stval=0x39013000
+usertrap(): unexpected scause 0xf pid=6641
+            sepc=0x4442 stval=0x3a013000
+usertrap(): unexpected scause 0xf pid=6642
+            sepc=0x4442 stval=0x3b013000
+usertrap(): unexpected scause 0xf pid=6643
+            sepc=0x4442 stval=0x3c013000
+usertrap(): unexpected scause 0xf pid=6644
+            sepc=0x4442 stval=0x3d013000
+usertrap(): unexpected scause 0xf pid=6645
+            sepc=0x4442 stval=0x3e013000
+usertrap(): unexpected scause 0xf pid=6646
+            sepc=0x4442 stval=0x3f013000
+OK
+test lazy_copy: OK
+test lazy_sbrk: OK
+usertests slow tests starting
+test bigdir: OK
+test manywrites: OK
+test badwrite: OK
+test execout: OK
+test diskfull: balloc: out of blocks
+balloc: out of blocks
+OK
+test outofinodes: ialloc: no inodes
+OK
+ALL TESTS PASSED
+
+
+forktest:
+
+Was very fast, essentially just milliseconds
+
+$ forktest
+fork test
+fork test OK
+
+stressfs:
+
+Took a few seconds
+
+$ stressfs
+stressfs starting
+write 0
+write 1
+write 2
+write 3
+write 4
+read
+readre
+ad
+read
+read
